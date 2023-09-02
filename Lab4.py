@@ -1,23 +1,15 @@
-#Mean,Variance and standard deviation 
- n = int(input("Enter the number students: ")) 
- list1 = [] 
- for i in range(n): 
- marks = int(input("Enter marks of each student in python: ")) 
- list1.append(marks) 
- print("List containing marks of student: ", list1) 
- print("-"*50) 
- # Finding Mean 
- sum = 0 # Initialize 
- for i in list1: 
- sum += i 
- print("Sum of all the elements in the list: ", sum) 
- x_bar = sum/len(list1) 
- print("Mean: ", x_bar) 
- # Finding Variance 
- var = 0 # Initialize 
- for i in list1: 
- var = var + ((i - x_bar)**2)/len(list1) 
- print("Variance: ", var) 
- # Finding Standard Deviation 
- std_dev = var**0.5 
- print("Standard Deviation: ", std_dev)
+# Method 2 - Using dictionary 
+ sentence = "512155461454" 
+ char_dict = {} 
+ for char in sentence: 
+ if char in char_dict: 
+ char_dict[char] = char_dict[char] + 1 
+ else: 
+ char_dict[char] = 1 
+ print("Frequency of each digit: ", char_dict) 
+ print('-'*50) 
+ print(char_dict.keys()) 
+ print('-'*50) 
+ print(char_dict.values()) 
+ print('-'*50) 
+ print(char_dict.items())
